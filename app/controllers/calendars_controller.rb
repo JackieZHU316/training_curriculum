@@ -15,7 +15,8 @@ class CalendarsController < ApplicationController
   private
 
   def plan_params
-    params.require(:calendars).permit(:date, :plan)
+    # params.require(:calendars).permit(:date, :plan) 元のソースコードをとりあえず残しておく
+    params.require(:plan).permit(:date, :plan) # あってないかもしれないが、とりあえず記述しておく
   end
 
 
